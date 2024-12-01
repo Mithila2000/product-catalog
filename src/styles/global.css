@@ -1,0 +1,176 @@
+/* Reset some basic styles for consistency across browsers */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3498db;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+header nav ul li a:hover {
+  color: #3498db;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+input, select, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.card img {
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* global.css */
+
+/* Define the dimensions for product images */
+.product-image {
+    width: 100%; /* Makes the image responsive, scales to container width */
+    max-width: 300px; /* Limits the maximum width of the image */
+    height: auto; /* Keeps the aspect ratio intact */
+    object-fit: cover; /* Ensures the image covers the container, cropping if needed */
+    margin-bottom: 15px; /* Optional: Adds space below the image */
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create a flexible grid with auto-fill */
+    gap: 20px; /* Space between the grid items */
+    padding: 20px;
+  }
+
+/* Media Query for responsive design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
